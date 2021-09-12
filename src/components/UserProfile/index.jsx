@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 import userProfileImg from '../../assets/image-jeremy.png';
 import './style.scss';
@@ -6,6 +6,12 @@ import { UserContext } from '../../context';
 
 export default function UserProfile() {
 	const [rangeTime, setRangeTime] = useContext(UserContext);
+
+	function handleClick(event, rangeValue){
+		setRangeTime(rangeValue)
+		document.querySelectorAll("button").forEach(item => item.classList.remove("active"))
+		event.target.classList.add("active")
+	}
 	
 	return(
 		<aside>
@@ -17,9 +23,9 @@ export default function UserProfile() {
 			</div>
 
 			<div className="time-interval-options">
-				<button type="button" onClick={() => setRangeTime("daily")}>Daily</button>
-				<button type="button" onClick={() => setRangeTime("weekly")}>Weekly</button>
-				<button type="button" onClick={() => setRangeTime("monthly")}>Monthly</button>
+				<button onClick={e => handleClick(e, "daily")}>Daily</button>
+				<button onClick={e => handleClick(e, "weekly")}>Weekly</button>
+				<button onClick={e => handleClick(e, "monthly")}>Monthly</button>
 			</div>
 		</aside>
 	)
