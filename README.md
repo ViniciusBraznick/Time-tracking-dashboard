@@ -7,7 +7,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 ![](./src/assets/desktop-preview.jpg)
 
 ### Links
-- Live Site URL: [time-tracking-dashboard-seven](https://time-tracking-dashboard-seven.vercel.app/)
+- Live Site URL: [time tracking dashboard](https://time-tracking-dashboard-seven.vercel.app/)
 
 ### Built with
 
