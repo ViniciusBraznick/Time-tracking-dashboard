@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import userProfileImg from '../../assets/image-jeremy.png';
 import './style.scss';
+import { UserContext } from '../../context';
 
 export default function UserProfile() {
+	const [rangeTime, setRangeTime] = useContext(UserContext);
+	
 	return(
 		<aside>
 			<div className="user-data">
@@ -14,9 +17,9 @@ export default function UserProfile() {
 			</div>
 
 			<div className="time-interval-options">
-				<button type="button">Daily</button>
-				<button type="button">Monthly</button>
-				<button type="button">Weekly</button>
+				<button type="button" onClick={() => setRangeTime("daily")}>Daily</button>
+				<button type="button" onClick={() => setRangeTime("weekly")}>Weekly</button>
+				<button type="button" onClick={() => setRangeTime("monthly")}>Monthly</button>
 			</div>
 		</aside>
 	)
