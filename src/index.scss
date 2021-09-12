@@ -5,7 +5,7 @@
 	box-sizing: border-box;
 }
 
-body{
+body, html{
 	min-width: 375px;
 
 	font: normal 18px 'Rubik', sans-serif;
@@ -26,5 +26,20 @@ button{
 }
 
 .active{
+	color: white;
+}
+
+.border-radius{
+	border-radius: 15px;
+}
+.padding{
+	padding: 1em 1.5em;
+}
+
+.d-flex{
+	display: flex;
+}
+
+h1,h2,p, .card-content{
 	color: white;
 }

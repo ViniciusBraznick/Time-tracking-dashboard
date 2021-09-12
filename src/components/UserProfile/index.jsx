@@ -14,15 +14,17 @@ export default function UserProfile() {
 	}
 	
 	return(
-		<aside>
-			<div className="user-data">
-				<img src={userProfileImg} alt="User profile" width="72px"/>
+		<aside className="border-radius d-flex">
+			<div className="user-data padding">
+				<img src={userProfileImg} alt="User profile" width="72px" height="72px"/>
 
-				<span>Report for</span>
-				<h1>Jeremy <br/> Robson</h1>
+				<div className="user-name">
+					<span>Report for</span>
+					<h1>Jeremy Robson</h1>
+				</div>
 			</div>
 
-			<div className="time-interval-options">
+			<div className="time-interval-options padding d-flex">
 				<button onClick={e => handleClick(e, "daily")}>Daily</button>
 				<button onClick={e => handleClick(e, "weekly")}>Weekly</button>
 				<button onClick={e => handleClick(e, "monthly")}>Monthly</button>

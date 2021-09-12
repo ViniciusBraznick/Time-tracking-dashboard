@@ -5,7 +5,7 @@ import './style.scss';
 
 export default function Container() {
 	return(
-			<main>
+			<main className="d-flex">
 				<UserProfile />
 				<Cards />
 			</main>

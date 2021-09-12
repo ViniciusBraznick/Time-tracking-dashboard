@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import {card_data} from '../../data.js';
+import { card_data } from '../../data.js';
+import { UserContext } from '../../context.js';
 
 import optionIcon from '../../assets/icon-ellipsis.svg';
 import './style.scss';
-import { UserContext } from '../../context.js';
 
 export default function Cards() {
 	const [rangeTime, setRangeTime] = useContext(UserContext);
@@ -12,9 +12,9 @@ export default function Cards() {
 		<div className="cards-container">
 			{card_data.map(card => {
 					return(
-						<section>
-							<div className="card-content">
-								<div className="card-header">
+						<section className="border-radius d-flex">
+							<div className="card-content d-flex">
+								<div className="card-header d-flex">
 									<span>{card.title}</span>
 									<img src={optionIcon} alt="options" width="20px" height="5px"/>
 								</div>

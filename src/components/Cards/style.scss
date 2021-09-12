@@ -1,14 +1,12 @@
 .cards-container{
 	display: grid;
-	grid-template-columns: 12em 12em 12em;
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: repeat(3, 12em);
+	grid-template-rows: repeat(2, 1fr);
 	gap: 1.5em;
 	margin-left: 1.5em;
 
 	section{
-		border-radius: 15px;
 		overflow: hidden;
-		display: flex;
 		align-items: flex-end;
 
 		.card-content{
@@ -16,17 +14,14 @@
 			padding: 1em;
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
-			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
-			color: white;
 			background: hsl(235, 46%, 20%);
 		}
 	}
 }
 
 .card-header{
-	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
@@ -47,6 +42,7 @@
 	}
 }
 
+// Dynamically add background to cards
 $background: (
 	"work": hsl(15, 100%, 70%), 
 	"play": hsl(195, 74%, 62%), 
@@ -63,4 +59,29 @@ $i: 1;
 		background-position: 90% -12px;
 	}
 	$i: $i + 1;
+}
+
+
+@media (max-width: 890px) {
+	.cards-container{
+		grid-template-columns: 90vw;
+		grid-template-rows: repeat(6, 1fr);
+
+		margin-left: 0;
+
+		section{
+			.card-content{
+				padding: 1.5em;
+			}
+		}
+	}
+
+	.card-hours{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h3{
+			font-size: 2rem;
+		}
+	}
 }
