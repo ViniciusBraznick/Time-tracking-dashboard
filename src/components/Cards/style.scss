@@ -55,7 +55,6 @@ $background: (
 	"social": hsl(264, 64%, 52%), 
 	"self-care": hsl(43, 84%, 65%)
 );
-
 $i: 1;
 
 @each $name, $glyph in $background {

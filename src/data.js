@@ -1,4 +1,4 @@
-[
+export const card_data =[
   {
     "title": "Work",
     "timeframes": {
